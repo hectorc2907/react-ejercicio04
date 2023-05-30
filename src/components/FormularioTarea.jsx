@@ -9,12 +9,8 @@ const FormularioTarea = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTareas([...tareas, tarea]);
-    handleAgregarDatos(tarea);
+    setTarea("");
   };
-
-  const handleAgregarDatos = (tarea) => {
-    setTareas([...tareas, tarea]);
-  }
 
   return (
     <>
@@ -22,7 +18,7 @@ const FormularioTarea = () => {
         <Form.Group className="mb-3 d-flex" controlId="tarea">
           <Form.Control
             type="text"
-            placeholder="ingrese una tarea"
+            placeholder="Ingrese una Tarea"
             onChange={(e) => setTarea(e.target.value)}
             value={tarea}
           />
@@ -31,7 +27,7 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas mostrarTareas = {tareas}></ListaTareas>
+      <ListaTareas tareas = {tareas}></ListaTareas>
     </>
   );
 };
