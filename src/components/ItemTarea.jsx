@@ -1,12 +1,14 @@
 import { Button, ListGroup } from "react-bootstrap";
 
-const ItemTarea = ({tarea}) => {
-    return (
-        <ListGroup.Item className="d-flex justify-content-between">
-            {tarea}
-            <Button variant="danger">Borrar</Button>
-        </ListGroup.Item>
-    );
+const ItemTarea = ({ tarea, borrarTarea }) => {
+  return (
+    <ListGroup.Item className="d-flex justify-content-between">
+      {tarea}
+      <Button variant="danger" onClick={() => borrarTarea(tarea)}>
+        Borrar
+      </Button>
+    </ListGroup.Item>
+  );
 };
 
 export default ItemTarea;
