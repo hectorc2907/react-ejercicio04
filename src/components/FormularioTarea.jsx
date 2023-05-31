@@ -1,6 +1,6 @@
 import { Form, Button } from "react-bootstrap";
 import ListaTareas from "./ListaTareas";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
